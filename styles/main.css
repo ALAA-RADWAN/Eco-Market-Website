@@ -1,0 +1,544 @@
+/* Base web design */
+* {margin: 0; padding: 0;}
+body {
+  width: 95%;
+  max-width: 1200px;
+  margin: auto;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  color: #222;
+  background: #fff;
+}
+
+/*Header and footer consistency */
+header { 
+  padding: 1em 0; 
+  text-align: center; 
+  border-bottom: 2px solid #9A7B2F;/*a.	Add a border below the header. */
+  }
+
+header h1 { font-size: 1.75em; margin: 0 0 .25em; color: #1C4A3F;}
+header h2 { font-size: 1.125em; color: #9A7B2F; margin: 0; } /* mustard */
+
+
+footer {
+  clear: both; /* Clear floats in footer */
+  padding: 1em 0;
+  text-align: center;
+  border-top: 2px solid #9A7B2F; /* mustard */
+  background-color: #123e34;
+  color: #90EE90; /* pastel green */
+}
+footer p { font-size: .8125em; }
+
+/*Main - Sections and content hierarchy */
+main { width: 95%; 
+  margin: 0px auto; 
+  max-width: 1200px;}
+
+section { margin: 1.5em 0; }
+section h1 { font-size: 1.25em; margin-bottom: .5em; color: #9A7B2F; }
+section h1:hover{
+  transform: translateY(-5px);
+}
+section h2 { font-size: 1.125em; margin-bottom: .5em; color: #9A7B2F;}
+section h2:hover{
+  transform: translateY(-5px);
+}
+section p, li { font-size: .95em; line-height: 1.55; }
+
+/*Logo styling for consistent placement */
+.logo-link {
+  display: inline-block;
+  vertical-align: middle;
+}
+.logo {
+  max-height: 80px;
+  max-width: 100%;   
+  height: auto;      /* keeps proportions or scalable*/
+  width: auto;
+  margin-right: 0.5em;
+}
+.site-title {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+
+
+/*Navigation */
+/* Hide mobile menu by default, show desktop nav */
+#mobile_menu { 
+  display: none; 
+}
+#nav_menu { 
+  display: block; 
+}
+
+/* Top-level navigation list */
+#nav_menu ul {
+  list-style: none;
+  margin: 0;
+  padding-top: 1em;
+  display: flex;              /* horizontal layout */
+  justify-content: center;    /* center items */
+  gap: 1em;                 /* spacing between items */
+}
+
+/* Top-level links */
+#nav_menu > ul > li > a {
+  display: inline-block;
+  padding: .5em .75em;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #1C4A3F;             /* dark green */
+  background: #E9E2C9;        /* cream */
+}
+
+
+/* Current page highlight */
+#nav_menu a.current { 
+  background: #9A7B2F;        /* mustard */
+  color: #fff; 
+}
+
+#nav_menu a.current:focus {
+  outline: 2px solid #866b26ff;
+}
+
+
+/* Dropdown container */
+#nav_menu li {
+  position: relative;
+}
+
+/* Dropdown menu (second tier) */
+#nav_menu li ul {
+  display: none;              /* hidden by default */
+  position: absolute;
+  top: 100%;                  /* directly below parent */
+  left: 0;
+  background: #F3F0E6;        /* light cream */
+  min-width: 180px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Show dropdown on hover */
+#nav_menu li:hover ul {
+  display: block;
+}
+
+/* Dropdown links */
+#nav_menu li ul li a {
+  display: block;
+  padding: 0.75em 1em;
+  text-decoration: none;
+  color: #1C4A3F;             /* dark green */
+  background: #F3F0E6;
+}
+
+/* Hover effect for dropdown links */
+#nav_menu li ul li a:hover {
+  background: #9A7B2F;        /* mustard */
+  color: #fff;
+}
+
+
+
+/******* image-grid-section  used in home and about pages*******/
+.image-grid-section {
+  margin: 0 auto;
+  padding: 1em 0;
+}
+.image-grid-section h2{
+text-align: center;
+  color: #1C4A3F; /* dark green */
+}
+
+.images-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin: 40px 0;
+    align-items: start;
+}
+
+.image-card {
+    text-align: center;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(46, 75, 43, 0.1);
+    border: 2px solid #F3F0E6; /* cream */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+.image-card:hover {
+    transform: translateY(-5px);/*this is not included in the course but it helped do animation*/
+    box-shadow: 0 8px 25px rgba(46, 75, 43, 0.15);
+}
+
+.feature-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    border-bottom: 3px solid #9A7B2F; /* mustard */
+}
+
+/* Caption styling */
+.image-caption {
+    font-weight: bold;
+    color: #1C4A3F; /* darkgreen */
+    margin: 0;
+    padding: 20px;
+    font-size: 1em;
+    background: #fff;
+    text-align: center;  /* center caption under image */
+}
+.image-card a {
+  text-decoration: none;
+}
+
+
+/**only in home page**/
+/* This is not in the course but it helped me ensure padding/borders don't break widths */
+* {
+  box-sizing: border-box;
+}
+
+/* Container section */
+.more_info {
+  padding: 1em 0;
+  margin: 0 auto;
+  overflow: hidden; 
+}
+
+/* Paragraph block */
+.description {
+  float: left;
+  width: 65%;
+  background: #F3F0E6;
+  padding: 20px;
+  border-radius: 12px;
+  border-left: 5px solid #9A7B2F;
+  box-shadow: 0 4px 12px rgba(46,75,43,.08);
+}
+
+/* Aside block */
+aside {
+  float: right;
+  width: 30%;
+  background: linear-gradient(135deg, #F3F0E6 0%, #f0f0d8 100%);
+  padding: 20px;
+  border-radius: 12px;
+  border-right: 5px solid #9A7B2F;
+  box-shadow: 0 4px 15px rgba(46, 75, 43, 0.1);
+}
+
+
+
+aside h2 {
+    color: #9A7B2F; /* mustard */
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 2px solid #9A7B2F; /* mustard */
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+aside ul { list-style: none; padding: 0; margin: 0; }
+aside li {
+    margin-bottom: 10px;
+    padding: 12px;
+    background: #fff;
+    border-radius: 8px;
+    border: 1px solid rgba(212, 160, 23, 0.3);
+    
+}
+aside a {
+  color: #1C4A3F; /* dark green */
+  text-decoration: none;
+  font-weight: 500;
+  display: block;
+  transition: color 0.3s ease;
+}
+
+aside a:visited {
+  color: #6A0DAD; /* purple */
+}
+
+aside a:focus,
+aside a:hover {
+  color: #008080; /* teal */
+  text-decoration: none;
+}
+
+aside li:hover {
+  background: #ceab51; /* mustard */
+  transform: translateX(5px);
+  box-shadow: 0 4px 8px rgba(46, 75, 43, 0.2);
+}
+/*--------------------------------------------*/
+
+
+/*Products page*/
+
+/*Tables */ 
+/*Also for Events page incase we used the table design instead of zizag layout*/
+table {box-sizing: border-box; border-collapse: collapse; margin-top: 1em; }
+thead th, tbody td, tfoot th, tfoot td {
+  border: 1px solid #ddd; padding: .55em .6em; text-align: left;
+}
+tbody tr:nth-child(even) { background: #f7f7f7; }
+td, th {
+  word-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+.promotion{
+  background-color: #f5fff5;
+  border-top: 2px solid var(--darkgreen);
+  padding: 20px;
+  text-align: center;
+  font-size: 1.1em;
+}
+
+.promotion a {
+  color: var(--darkgreen);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.promotion a:hover {
+  text-decoration: underline;
+}
+
+/*Events page*/
+
+.event {
+  padding-top: 2em;
+  margin-bottom: 2em;
+}
+
+/* Text block */
+.event-text {
+  float: left;
+  width: 50%;
+  line-height: 1.6;
+  padding: 1em;
+}
+
+/* Image block */
+.event-image {
+  float: right;
+  width: 50%;
+  text-align: center;
+}
+.event-image:hover {
+  /*this is not included in the course but it helped me do animation*/
+    transform: translateY(-5px);
+}
+
+.event-image img {
+  max-width: 60%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(46, 75, 43, 0.2);
+}
+
+/* Alternate or zigzag layout for even sections */
+.event:nth-child(even) .event-text {
+  float: right;
+}
+.event:nth-child(even) .event-image {
+  float: left;
+}
+
+/* Clear floats */
+.event::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+
+#printButton{
+  background: #9A7B2F;       /* mustard */
+  color: #fff; 
+  border: none; 
+  padding: .6em 1em; 
+  border-radius: 4px; 
+  cursor: pointer;
+}
+#printButton:hover { 
+  background: #1C4A3F;       /* darkgreen */
+}
+
+/*Register page*/
+/* Forms */
+fieldset { 
+  margin: 1em 0; 
+  padding: .5em 1em; 
+  border: 1px solid #ddd;   /* gray */
+}
+legend { 
+  color: #1C4A3F;           /* darkgreen */
+  font-weight: bold; 
+  font-size: .95em; 
+}
+
+#register_form {
+  max-width: 500px;
+  margin: 15px auto;
+  padding: 20px;
+  border: 2px solid #1C4A3F; 
+  background-color: #fff;
+}
+label { 
+  display: block; 
+  font-weight: bold; 
+  margin-bottom: .35em; 
+}
+input, select, textarea {
+  width: 95%; 
+  max-width: 460px; 
+  padding: .5em; 
+  border: 1px solid #ccc; 
+  border-radius: 4px;
+}
+.error {
+  color: #B30000; /* dark red for visibility */
+  font-size: 0.9em;
+  margin-top: 0.25em;
+  display: block;
+}
+input, .error {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#buttons { 
+  display: flex; 
+  gap: .5em; 
+}
+#buttons input, #buttons button {/*input, #buttons button*/
+  background: #9A7B2F;       /* mustard */
+  color: #fff; 
+  border: none; 
+  padding: .6em 1em; 
+  border-radius: 4px; 
+  cursor: pointer;
+}
+#buttons input:hover, #buttons button:hover { 
+  background: #1C4A3F;       /* darkgreen */
+}
+
+/*Confirm page*/
+#confirmation table {
+  width: 95%;
+  max-width: 600px;
+  margin: 30px auto;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  background-color: #f9fff9;
+  border: 2px solid #1C4A3F;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#confirmation th {
+  text-align: left;
+  padding: 10px;
+  width: 35%;
+  color: #1C4A3F;
+  font-weight: bold;
+  border-bottom: 1px solid #ccc;
+}
+
+#confirmation td {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  text-align: left;
+}
+
+/*about page*/
+
+.team-title{
+  text-decoration: underline;
+  font-size: 1.125em;
+   color: #9A7B2F !important; 
+}
+.team-title:hover {
+    transform: translateY(-5px);
+}
+
+.our-story {
+  width: 95%;
+  max-width: 800px;
+  margin: 2em auto;
+  padding: 1.5em;
+  text-align: center;
+  background: #F3F0E6; /* light cream */
+  border-left: 5px solid #9A7B2F;
+  border-right: 5px solid #9A7B2F; /* mustard */
+  box-shadow: 0 4px 12px rgba(46,75,43,.08);
+  border-radius: 12px;
+}
+
+.our-story:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(46, 75, 43, 0.15);
+}
+
+.our-story p {
+  font-size: 1em;
+  line-height: 1.6;
+  color: #1C4A3F;
+  margin: 0;
+}
+.feature-image-about {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    border-bottom: 3px solid #9A7B2F; /* mustard */
+}
+
+
+.reviews {
+  width: 95%;
+  max-width: 1200px;
+  margin: 2em auto;
+  padding: 1em 0;
+}
+.reviews h2{
+  text-decoration: underline;
+  font-size: 1.125em;
+   color: #9A7B2F; 
+   padding-bottom: 1em;
+}
+.reviews h2:hover {
+    transform: translateY(-5px);
+}
+.review-box {
+  background: #F3F0E6; /* light cream */ 
+  border-right: 5px solid #9A7B2F;
+   border-left: 5px solid #9A7B2F; /* mustard */
+  box-shadow: 0 4px 12px rgba(46,75,43,.08);
+  border-radius: 12px;
+  padding: 1em 1.25em;
+  margin-bottom: 1.5em;
+}
+.review-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(46, 75, 43, 0.15);
+}
+
+.review-box p {
+  margin: 0;
+  font-size: 1em;
+  line-height: 1.6;
+  color: #1C4A3F; /* dark green */
+}

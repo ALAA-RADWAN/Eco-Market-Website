@@ -1,0 +1,104 @@
+/* Mobile menu container */
+.slicknav_menu {
+  max-width: 1200px;
+  width: 100%;
+  font-size: 16px;
+  background: #1C4A3F;   /* EcoMarket dark green */
+  padding: 1em 0;
+  border-top: 2px solid #9A7B2F; /* mustard */
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2); 
+}
+
+/* Hamburger button */
+.slicknav_btn {
+  margin: 5px;
+  padding: 0.438em 0.625em;
+  border: 1px solid #fff;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  text-shadow: 0 1px 1px  rgba(255,255,255,0.75); 
+}
+
+/* Hamburger icon lines */
+.slicknav_menu .slicknav_icon-bar {
+  border-radius: 1px;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.25);
+}
+
+/* Menu links */
+.slicknav_nav a {
+  color: #fff;
+  display: block;
+  padding: 8px 10px;
+  text-decoration: none;
+  border-radius: 6px; 
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Menu items */
+.slicknav_nav .slicknav_item {
+  border-bottom: 1px solid rgba(255,255,255,.2);
+  margin: 2px 5px;
+  padding: 5px 10px;
+}
+
+/* Hover states */
+.slicknav_nav a:hover,
+.slicknav_nav .slicknav_item:hover {
+  background: #ceab51;   
+  color: #222;        
+}
+
+/* Responsive design */
+@media only screen and (max-width: 950px) {
+  body { font-size: 85%; }
+}
+@media (max-width: 950px) {
+    .images-row { grid-template-columns: repeat(2, 1fr); gap: 25px; }
+    .image-grid-section h1 { font-size: 2em; }
+}
+@media only screen and (max-width: 900px) {
+  #nav_menu { display: none; }     /* hide desktop nav */
+  #mobile_menu { display: block; } /* show SlickNav */
+}
+@media only screen and (max-width: 700px) {
+  #nav_menu { display: none; }     /* hide desktop nav */
+  #mobile_menu { display: block; } /* show SlickNav */
+}
+
+@media (max-width: 700px) {
+    .images-row { grid-template-columns: 1fr; gap: 20px; }
+    .feature-image { height: 200px; }
+    .image-grid-section { padding: 20px 15px; }
+    .image-grid-section h1 { font-size: 1.8em; }
+}
+
+@media only screen and (max-width: 700px) {
+  #nav_menu ul { flex-wrap: wrap; }
+  input, select, textarea { max-width: 95%; }
+}
+@media only screen and (max-width: 700px) {
+  .description,
+  aside {
+    float: none;
+    width: 100%;
+    margin: 15px 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .logo { max-height: 60px; }
+  .site-title h1 { font-size: 1.5em; }
+  .site-title h2 { font-size: 1em; }
+}
+@media (max-width: 700px) {
+  .event-text,
+  .event-image {
+    float: none;       /* remove floats */
+    width: 100%;       
+    text-align: center;
+    padding: 0.5em;
+  }
+}
