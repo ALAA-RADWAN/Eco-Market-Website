@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Semantic HTML + responsive meta -->
+  <meta charset="utf-8">
+  <title>About Us</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- linking CSS files -->
+  <link rel="stylesheet" href="styles/main.css">
+   <link rel="stylesheet" href="styles/slicknav.css">
+   <!--jquery files-->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/jquery.slicknav.min.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('#nav_menu').slicknav({ prependTo: '#mobile_menu' });
+    });
+  </script>
+</head>
+<body>
+
+   <!--Logo and header -->
+  <header>
+    <a href="index.html" class="logo-link">
+    <img src="images/iter 3-1.png" alt="EcoMarket UK logo" class="logo">
+  </a>
+  <div class="site-title">
+    <h1>EcoMarket UK</h1>
+    <h2>About Our Story and Team</h2>
+  </div>
+  </header>
+
+ <!--Horizontal navigation menu- two-tiers -->
+  <nav id="mobile_menu"></nav>
+  <nav id="nav_menu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li>
+        <a href="products.html">Products</a>
+        <ul>
+          <li><a href="products.html#house-box">Eco House Box</a></li>
+          <li><a href="products.html#subscription">EcoClub Subscription Boxes</a></li>
+          <li><a href="products.html#tree-planting">Tree Planting Program</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="events.html">Events</a>
+        <ul>
+          <li><a href="events.html#plastic-free-july">Plastic-Free July Sale</a></li>
+          <li><a href="events.html#tree-challenge">Tree Planting Challenge</a></li>
+          <li><a href="events.html#product-launche">New Eco Product Launche</a></li>
+        </ul>
+      </li>
+      <li><a href="register.html">Register</a></li>
+      <li><a href="about.html" class="current">About Us</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <!--story paragraph -->
+    <section class="our-story">
+      <h1>Our Story</h1>
+      <p>
+        EcoMarket started as a university project and has grown into a community of makers, buyers,
+         and planet lovers. 
+        The team is expanding its reach through B2B partnerships and social sustainability awareness.
+      </p>
+    </section>
+
+
+<!--image grid to show the team with their titles-->
+     <section class="image-grid-section">
+    <h2 class="team-title">Meet the Team</h2>
+    <div class="images-row">
+
+    <figure class="image-card">
+      <img src="images/ava.png" alt="Ava Thompson" class="feature-image-about">
+      <figcaption class="image-caption">Ava Thompson - Founder & Sustainability Lead</figcaption>
+      </a>
+    </figure>
+
+    <figure class="image-card">
+      <img src="images/noor.png" alt="Noor Almas" class="feature-image-about">
+      <figcaption class="image-caption">Noor Almas – Partnerships Manager</figcaption>
+      </a>
+    </figure>
+
+    <figure class="image-card">
+      <img src="images/max.png" alt="Max Davies" class="feature-image-about">
+      <figcaption class="image-caption">Max Davies - Customer Support Lead</figcaption>
+      </a>
+    </figure>
+
+  </div>
+</section>
+    
+
+<!--reviews section for Satisfied Users-->
+<section class="reviews">
+  <h2>User Reviews</h2>
+
+  <div class="review-box">
+    <p><strong>Hannah B.</strong> — The subscription box surprised me with useful and beautiful items!</p>
+  </div>
+
+  <div class="review-box">
+    <p><strong>Carlos R.</strong> — I now shop sustainably thanks to their guides and ratings.</p>
+  </div>
+
+  <div class="review-box">
+    <p><strong>Jodie S.</strong> — Customer support helped me change my delivery with zero hassle.</p>
+  </div>
+</section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 EcoMarket UK</p>
+  </footer>
+</body>
+</html>

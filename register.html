@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!--Semantic HTML + responsive meta -->
+ <meta charset="utf-8">
+  <title>Register</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="eco products, sustainable living">
+  <!-- linking CSS files -->
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/slicknav.css">
+  <!--jquery files-->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/jquery.slicknav.min.js"></script>
+  <script src="js/main.js"></script>
+  <!--External JS file for validation -->
+  <script src="js/register.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('#nav_menu').slicknav({ prependTo: '#mobile_menu' });
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <!--Logo and header -->
+    <a href="index.html" class="logo-link">
+      <img src="images/iter 3-1.png" alt="EcoMarket UK logo" class="logo">
+    </a>
+    <div class="site-title">
+      <h1>EcoMarket UK</h1>
+      <h2>Register for Updates</h2>
+    </div>
+  </header>
+
+  <!--Horizontal navigation menu- two-tiers -->
+  <nav id="mobile_menu"></nav>
+  <nav id="nav_menu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li>
+        <a href="products.html">Products</a>
+        <ul>
+          <li><a href="products.html#house-box">Eco House Box</a></li>
+          <li><a href="products.html#subscription">EcoClub Subscription Boxes</a></li>
+          <li><a href="products.html#tree-planting">Tree Planting Program</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="events.html">Events</a>
+        <ul>
+          <li><a href="events.html#plastic-free-july">Plastic-Free July Sale</a></li>
+          <li><a href="events.html#tree-challenge">Tree Planting Challenge</a></li>
+          <li><a href="events.html#product-launche">New Eco Product Launche</a></li>
+        </ul>
+      </li>
+      <li><a href="register.html" class="current">Register</a></li>
+      <li><a href="about.html" >About Us</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <!-- Registration form with validation -->
+    <form id="register_form" action="confirm.html" method="get">
+      <fieldset>
+        <legend>Registration Information</legend>
+        <div>
+          <label for="email">Email Address:</label>
+          <input type="text" id="email" name="Email Address:" placeholder="example@domain.com">
+          <span class="error">*</span>
+        </div>
+        <div>
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="Password:" placeholder="At least 6 characters">
+          <span class="error">*</span>
+        </div>
+        <div>
+          <label for="verify">Verify Password:</label>
+          <input type="password" id="verify" name="Verify Password:">
+          <span class="error">*</span>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Member Information</legend>
+        <div>
+          <label for="first_name">First Name:</label>
+          <input type="text" id="first_name" name="First Name:">
+          <span class="error">*</span>
+        </div>
+        <div>
+          <label for="last_name">Last Name:</label>
+          <input type="text" id="last_name" name="Last Name:">
+          <span class="error">*</span>
+        </div>
+        <div>
+          <label for="phone">Phone Number:</label>
+          <input type="text" id="phone" name="Phone Number:" placeholder="999-999-9999">
+          <span class="error">*</span>
+        </div>
+        <div>
+          <label for="country">Country:</label>
+          <select id="country" name="Country:">
+            <option value="">Select a Country</option>
+            <option>UK</option>
+            <option>USA</option>
+            <option>Canada</option>
+          </select>
+          <span class="error">*</span>
+        </div>
+        <div>
+          <label for="comments">Comments:</label>
+          <textarea id="comments" name="Comments:" rows="4" cols="40"></textarea> 
+        </div>
+      </fieldset>
+
+      <!--registration buttons-->
+      <fieldset id="buttons">
+        <input type="submit" id="register" value="Register">
+        <input type="reset" id="reset_form" value="Reset">
+      </fieldset>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 EcoMarket UK</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Semantic HTML + responsive meta -->
+  <meta charset="utf-8">
+  <title>Events</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="eco products, sustainable living">
+  <!-- linking CSS files -->
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/slicknav.css">
+  <!--jquery files-->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/jquery.slicknav.min.js"></script>
+  <script src="js/main.js" ></script>
+  <script>
+    $(document).ready(function(){
+      $('#nav_menu').slicknav({ prependTo: '#mobile_menu' });
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <!--Logo and header -->
+    <a href="index.html" class="logo-link">
+      <img src="images/iter 3-1.png" alt="EcoMarket UK logo" class="logo">
+    </a>
+    <div class="site-title">
+      <h1>EcoMarket UK</h1>
+      <h2>Upcoming Eco Events</h2>
+    </div>
+    </header>
+
+    
+<!--Horizontal navigation menu- two-tiers -->
+  <nav id="mobile_menu"></nav>
+  <nav id="nav_menu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li>
+        <a href="products.html">Products</a>
+        <ul>
+          <li><a href="products.html#house-box">Eco House Box</a></li>
+          <li><a href="products.html#subscription">EcoClub Subscription Boxes</a></li>
+          <li><a href="products.html#tree-planting">Tree Planting Program</a></li>
+        </ul>
+      </li>
+      <li>
+        <a  class="current" href="events.html">Events</a>
+        <ul>
+         <li><a href="events.html#plastic-free-july">Plastic-Free July Sale</a></li>
+         <li><a href="events.html#tree-challenge">Tree Planting Challenge</a></li>
+            <li><a href="events.html#product-launch">New Eco Product Launch</a></li>
+        </ul>
+
+      </li>
+      <li><a href="register.html">Register</a></li>
+      <li><a href="about.html">About Us</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <!--I will create a section for every event and make the paragraph aside the image, 
+    i thought to make all images under each other but the design was better with the zigzag idea -->
+<!-- Event 1 -->
+  <section class="event" id="plastic-free-july">
+    <aside class="event-text">
+      <h2>Plastic-Free July Sale</h2>
+      <p>
+        Join us in <strong>London, July 2025</strong> for our Plastic-Free July Sale! 
+        Enjoy a <strong>50% discount</strong> on eco packaging and support sustainable living.
+      </p>
+    </aside>
+    <div class="event-image">
+      <img src="images/housetools2.png" alt="Eco packaging promotion for Plastic-Free July Sale">
+    </div>
+    <div style="clear: both;"></div>
+  </section>
+
+  <!-- Event 2 -->
+  <section class="event" id="tree-challenge">
+    <aside class="event-text">
+      <h2>Tree Planting Challenge</h2>
+      <p>
+        Take part in <strong>Manchester, September 2025</strong> for our Tree Planting Challenge! 
+        Help the community plant trees and make a greener future.
+      </p>
+    </aside>
+    <div class="event-image">
+      <img src="images/treeplanting_2.png" alt="Community tree planting in Manchester">
+    </div>
+    
+    <div style="clear: both;"></div>
+  </section>
+
+  <!-- Event 3 -->
+  <section class="event" id="product-launch">
+    <aside class="event-text">
+      <h2>New Product Launch</h2>
+      <p>
+        Don’t miss our <strong>Online Launch, November 2025</strong> of the Eco House Box subscription. 
+        A new way to live sustainably at home.
+      </p>
+    </aside>
+    <div class="event-image">
+      <img src="images/Newproduct.png" alt="Eco House Box subscription launch">
+    </div>
+    <div style="clear: both;"></div>
+  </section>
+
+    <!--table section for the events as another design option like products
+    and it will have the same format in main.css file-->
+    <!--<section>
+      <h1>EcoMarket Upcoming UK Events: </h1>
+      <table>
+        <thead><tr><th>Event</th><th>Date</th><th>Location</th><th>Details</th></tr></thead>
+        <tbody>
+          <tr><td>Plastic-Free July Sale</td><td>July 2025</td><td>London</td><td>50% Discount on eco packaging.</td></tr>
+          <tr><td>Tree Planting Challenge</td><td>Sept 2025</td><td>Manchester</td><td>Community tree planting.</td></tr>
+          <tr><td>New Product Launch</td><td>Nov 2025</td><td>Online</td><td>Eco House Box subscription.</td></tr>
+        </tbody>
+      </table>
+    </section>-->
+
+    <!--page print button -->
+    <section>
+      <h2 class="printb">Stay Updated</h2>
+      <input type="button" id="printButton" value="Print Events">
+    </section>
+  </main>
+
+  <footer><p>&copy; 2025 EcoMarket UK</p></footer>
+  
+</body>
+</html>
+
+

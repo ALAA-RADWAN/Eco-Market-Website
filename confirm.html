@@ -1,0 +1,98 @@
+ <!-- Confirmation page + data processing via query string -->
+<!doctype html>
+<html lang="en">
+<head>
+ <!--Semantic HTML + responsive meta -->
+  <meta charset="utf-8">
+  <title>Confirmation</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="eco products, sustainable living">
+  <!-- linking CSS files -->
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/slicknav.css">
+  <!--jquery files-->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/jquery.slicknav.min.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('#nav_menu').slicknav({ prependTo: '#mobile_menu' });
+    });
+  </script>
+  <script>
+    "use strict";
+    // Decode URL components
+    const decode = text => {
+      text = text.replace(/\+/g, " ");
+      text = text.replace(/%[a-fA-F0-9]{2}/g, m => String.fromCharCode("0x" + m.substr(1,2)));
+      return text;
+    };
+    //Display submitted fields in a table
+    const display_data = () => {
+      const parts = window.location.toString().split("?");
+      if (parts.length !== 2) { document.write("<p>No data was submitted.</p>"); return; }
+      const fields = parts[1].split("&");
+      if (!fields.length) { document.write("<p>No data was submitted.</p>"); return; }
+
+      document.write("<h1>Registration Confirmation</h1>");
+      document.write("<p>Your registration has been submitted with the following information:</p>");
+      document.write("<table>");
+      for (let i = 0; i < fields.length; i++) {
+        const pair = fields[i].split("=");
+        const key = decode(pair[0]);
+        const val = decode(pair[1] || "");
+        document.write("<tr><th>" + key + "</th><td>" + val + "</td></tr>");
+      }
+      document.write("</table>");
+    };
+  </script>
+</head>
+<body>
+  <header>
+    <!--Logo and header -->
+    <a href="index.html" class="logo-link">
+      <img src="images/iter 3-1.png" alt="EcoMarket UK logo" class="logo">
+    </a>
+    <div class="site-title">
+      <h1>EcoMarket UK</h1>
+      <h2>Confirmation</h2>
+    </div>
+  </header>
+
+   <!--Horizontal navigation menu- two-tiers -->
+  <nav id="mobile_menu"></nav>
+  <nav id="nav_menu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li>
+        <a href="products.html">Products</a>
+        <ul>
+          <li><a href="products.html#house-box">Eco House Box</a></li>
+          <li><a href="products.html#subscription">EcoClub Subscription Boxes</a></li>
+          <li><a href="products.html#tree-planting">Tree Planting Program</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="events.html">Events</a>
+        <ul>
+          <li><a href="events.html#plastic-free-july">Plastic-Free July Sale</a></li>
+          <li><a href="events.html#tree-challenge">Tree Planting Challenge</a></li>
+          <li><a href="events.html#product-launche">New Eco Product Launche</a></li>
+        </ul>
+      </li>
+      <li><a href="register.html">Register</a></li>
+      <li><a href="about.html" >About Us</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <!--Invoke display_data() -->
+    <section id="confirmation">
+      <script type="text/javascript">display_data();</script>
+    </section>
+  </main>
+
+  <footer><p>&copy; 2025 EcoMarket UK</p></footer>
+</body>
+</html>
+

@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!--Semantic HTML + responsive meta -->
+<meta charset="utf-8">
+  <title>Products</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="eco products, sustainable living">
+  <!-- linking CSS files -->
+ <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/slicknav.css">
+  <!--jquery files-->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/jquery.slicknav.min.js"></script>
+  <script src="js/main.js" ></script>
+  <script>
+    $(document).ready(function(){
+      $('#nav_menu').slicknav({ prependTo: '#mobile_menu' });
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <!--Logo and header -->
+    <a href="index.html" class="logo-link">
+      <img src="images/iter 3-1.png" alt="EcoMarket UK logo" class="logo">
+    </a>
+    <div class="site-title">
+      <h1>EcoMarket UK</h1>
+      <h2>Check out our products</h2>
+    </div>
+  </header>
+ 
+  <!--Horizontal navigation menu- two-tiers -->
+  <nav id="mobile_menu"></nav>
+  <nav id="nav_menu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li>
+        <a  class="current" href="products.html">Products</a>
+        <ul>
+          <li><a href="products.html#house-box">Eco House Box</a></li>
+          <li><a href="products.html#subscription">EcoClub Subscription Boxes</a></li>
+          <li><a href="products.html#tree-planting">Tree Planting Program</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="events.html">Events</a>
+        <ul>
+          <li><a href="events.html#plastic-free-july">Plastic-Free July Sale</a></li>
+          <li><a href="events.html#tree-challenge">Tree Planting Challenge</a></li>
+          <li><a href="events.html#product-launche">New Eco Product Launche</a></li>
+        </ul>
+      </li>
+      <li><a href="register.html">Register</a></li>
+      <li><a href="about.html">About Us</a></li>
+    </ul>
+  </nav>
+  
+  <main>
+
+    <!--a table to explain products-->
+    <section>
+      <h1>EcoMarket Products:</h1>
+      
+      <table>
+        <thead>
+          <tr><th>Product</th><th>Description</th><th>Price</th><th>Subscription</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Eco House Box</td><td>An assorted box of clearing products for your home.</td><td>£19.99</td><td>One-time</td></tr>
+          <tr><td>EcoClub Membership</td><td>Themed eco boxes.</td><td>£12.99</td><td>Monthly</td></tr>
+          <tr><td>Tree Planting Program</td><td>Optional donation to plant a tree</td><td>£1.00</td><td>Per order</td></tr>
+        </tbody>
+      </table>
+    </section>
+    <!--this section to navigate to events page where the user can find dicounts or promotions-->
+    <section class="promotion">
+     <h2>Looking for Discounts?</h2>
+     <p>Check out our latest <a href="events.html">Eco Events</a> for exclusive offers and community activities.</p>
+    </section>
+  </main>
+  <footer><p>&copy; 2025 EcoMarket UK</p></footer>
+</body>
+</html>
+
+

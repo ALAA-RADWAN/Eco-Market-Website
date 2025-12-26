@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!--Semantic HTML + responsive meta -->
+  <meta charset="utf-8">
+  <title>Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="eco products, sustainable living">
+  <!-- linking CSS files -->
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/slicknav.css">
+  <!--jquery files-->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/jquery.slicknav.min.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('#nav_menu').slicknav({ prependTo: '#mobile_menu' });
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <!--Logo and header -->
+    <a href="index.html" class="logo-link">
+      <img src="images/iter 3-1.png" alt="EcoMarket UK logo" class="logo">
+    </a>
+    <div class="site-title">
+      <h1>EcoMarket UK</h1>
+      <h2>Eco-conscious products, events, and community</h2>
+    </div>
+   
+  </header>
+<!--Horizontal navigation menu- two-tiers -->
+  <nav id="mobile_menu"></nav>
+  <nav id="nav_menu">
+    <ul>
+      <li><a class="current" href="index.html">Home</a></li>
+      <li>
+        <a href="products.html">Products</a>
+        <ul>
+          <li><a href="products.html#house-box">Eco House Box</a></li>
+          <li><a href="products.html#subscription">EcoClub Subscription Boxes</a></li>
+          <li><a href="products.html#tree-planting">Tree Planting Program</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="events.html">Events</a>
+        <ul>
+          <li><a href="events.html#plastic-free-july">Plastic-Free July Sale</a></li>
+          <li><a href="events.html#tree-challenge">Tree Planting Challenge</a></li>
+          <li><a href="events.html#product-launche">New Eco Product Launche</a></li>
+        </ul>
+      </li>
+      <li><a href="register.html">Register</a></li>
+      <li><a href="about.html" >About Us</a></li>
+    </ul>
+  </nav>
+
+  
+  <main> 
+    <!--image grid to explain the website services and products-->
+  <section class="image-grid-section">
+    <h2 class="highlight-heading">Discover Eco Solutions for Your Home, Community, and Planet.</h2>
+    <div class="images-row">
+
+    <figure class="image-card">
+      <a href="products.html#tree-planting">
+      <img src="images/treeplanting_1.png" alt="First Image" class="feature-image">
+      <figcaption class="image-caption">Tree Planting Program</figcaption>
+      </a>
+    </figure>
+
+    <figure class="image-card">
+      <a href="products.html#house-box">
+      <img src="images/housetools.png" alt="Second Image" class="feature-image">
+      <figcaption class="image-caption">Eco House Box</figcaption>
+      </a>
+    </figure>
+
+    <figure class="image-card">
+      <a href="products.html#subscription">
+      <img src="images/ecohouse.png" alt="Third Image" class="feature-image">
+      <figcaption class="image-caption">EcoClub Subscription</figcaption>
+      </a>
+    </figure>
+
+  </div>
+</section>
+
+<!--adding another section to explain more information about the community and its importance, 
+and appying a side for another resources related to eco concept-->
+<section class="more_info">
+  <div class="description">
+    <h2>Why Eco Education Matters?</h2>
+    <p>
+      EcoMarket UK is more than a marketplace, it's a movement. Alongside our curated eco boxes 
+      and tree planting program, we promote eco education to help individuals make informed, 
+      low-impact choices. From understanding sustainable materials to exploring the benefits of
+       conscious consumption, we believe that small steps lead to lasting change. 
+       Every product, every resource, and every donation is part of a bigger picture: 
+       empowering communities to live greener, smarter, and more sustainably.
+    </p>
+    <br>
+    <p>EcoMarket UK exists to simplify conscious shopping. 
+      We promote small eco brands and help people make low-impact choices with ease.</p>
+  </div>
+
+  <aside>
+    <h2>Resources</h2>
+    <ul>
+      <li><a href="https://wrap.org.uk" target="_blank" rel="noopener">WRAP UK</a></li>
+      <li><a href="https://recyclenow.com" target="_blank" rel="noopener">Recycle Now</a></li>
+      <li><a href="https://friendsoftheearth.uk" target="_blank" rel="noopener">Friends of the Earth</a></li>
+    </ul>
+  </aside>
+</section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 EcoMarket UK</p>
+  </footer>
+  
+</body>
+</html>
